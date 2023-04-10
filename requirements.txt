@@ -1,6 +1,7 @@
 flask
 gunicorn
 update
+os
 selenium
 pandas
 gspread
