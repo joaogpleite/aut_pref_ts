@@ -1,0 +1,9 @@
+update
+flask
+gunicorn
+selenium
+time
+pandas
+gspread
+getpass 
+requests
