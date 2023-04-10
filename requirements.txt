@@ -2,7 +2,6 @@ flask
 gunicorn
 update
 selenium
-time
 pandas
 gspread
 getpass 
