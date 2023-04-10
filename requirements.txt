@@ -1,6 +1,6 @@
-update
 flask
 gunicorn
+update
 selenium
 time
 pandas
