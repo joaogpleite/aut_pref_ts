@@ -14,7 +14,7 @@ TELEGRAM_API_KEY = os.environ["TELEGRAM_API_KEY"]
 TELEGRAM_ADMIN_ID = os.environ["TELEGRAM_ADMIN_ID"]
 GOOGLE_SHEETS_CREDENTIALS = os.environ["GOOGLE_SHEETS_CREDENTIALS"]
 
-nome_json = GOOGLE_CREDENTIALS_JSON
+nome_json = GOOGLE_SHEETS_CREDENTIALS
 conta = ServiceAccountCredentials.from_json_keyfile_name(nome_json)
 token = TELEGRAM_API_KEY
 
