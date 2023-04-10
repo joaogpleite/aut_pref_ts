@@ -5,3 +5,4 @@ selenium
 pandas
 gspread
 requests
+oauth2client
