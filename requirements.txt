@@ -4,5 +4,4 @@ update
 selenium
 pandas
 gspread
-getpass 
 requests
