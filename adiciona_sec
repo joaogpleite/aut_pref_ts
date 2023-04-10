@@ -1,0 +1,11 @@
+def adiciona_secretaria(df_teste, dici):
+    secretarias = []
+    for descricao in df_teste["Finalidade/Objeto/Serviço"]:
+        for chave, valor in dici.items():
+            if chave in descricao:
+                secretarias.append(valor)
+                break
+        else:
+            secretarias.append(None)
+    df_teste["Secretaria"] = secretarias
+    return df_teste
