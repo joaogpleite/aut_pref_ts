@@ -1,8 +1,0 @@
-flask
-gunicorn
-update
-selenium
-pandas
-gspread
-requests
-oauth2client
