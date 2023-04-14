@@ -7,11 +7,13 @@ Este é um script Python que faz **raspagem das Licitações da Pref. de Taboão
 
 ## Motivação :bulb:
 
-Esse projeto foi desenvolvido com a motivação de preencher um vazio de informação dentro da cidade de Taboão da Serra, pois não existe uma ferramenta, site ou plataforma onde esses dados possam ser encontrados de forma simples e de fácil acesso. Este projeto beneficiaria no apoio do trabalho de jornalismo de dados a partir do conteúdo público disponibilizado pela Prefeitura de Taboão da Serra (SP).
+Esse projeto foi desenvolvido com a motivação de preencher um vazio de informação noticiosa dentro da cidade de Taboão da Serra, principalmente a que faz análise das contas públicas locais, pois não existe uma ferramenta, site ou plataforma de fácil utilização onde esses dados possam ser encontrados de forma simples. Este projeto beneficiaria no apoio do trabalho de jornalismo de dados localmente a partir do conteúdo público disponibilizado pela Prefeitura de Taboão da Serra (SP).
 
-A análise realizada no trabalho de conclusão do Master em Jornalismo de Dados apontou que a cidade de Taboão da Serra gasta uma quantia significativa de dinheiro em processos que não permitem total transparência, como é o caso da modalidade 'Dispensa de Licitação'. Ao adotar essa postura, a Prefeitura local prejudica a visibilidade das contas públicas.
+Com no próprio Portal da Transparência da cidades, a dificuldade no acesso às informaçãoes é bastante notória, já que a navegação não privilegia a leitura, tampouco o entendimento do que está em análise, de maneira clara e objetiva.
 
-Para combater esse problema, foi desenvolvido um scrapper de licitações da Prefeitura de Taboão da Serra que, em associação com um bot de Telegram, atua como **provedor de informações sobre as licitações da cidade**.
+A análise exploratória, ou descritiva, realizada no trabalho apontou que a cidade de Taboão da Serra tem realizado uma quantidade significativa da verba pública em licitações com modalidade 'Dispensa de Licitação', que apresentam alguns empecilhos para identificação de critérios de escolha, concorrência de preços, entre outras. 
+
+A fim de mitigar as dificuldades para capturar, organizar e classificar informaçẽos dos gastos públicos municipais relativos às compras realizadas pela Prefeitura, foi desenvolvido um scrapper de licitações da Prefeitura de Taboão da Serra que, em associação com um bot de Telegram, atua como **provedor de informações sobre as licitações da cidade**.
 
 Dessa forma, o scrapper pode ajudar a garantir a transparência dos processos licitatórios e contribuir para o trabalho de jornalismo de dados.
 
@@ -37,23 +39,25 @@ Quando uma solicitação é recebida, o script irá classificar os dados do docu
 ## Dependências :clipboard:
 Este script depende dos seguintes pacotes Python:
 
-- os
-- gspread
+- Debian
+- chromium 
+- chromium-driver
 - pandas
 - oauth2client
-- telebot
+- re
+- time
 - requests
-- flask
 
 Estes podem ser instalados usando o pip, no caso do Google Colab, ou através do requirements.txt, estratégia abordada aqui.
+Recomenda-se o seu uso no Google Colab, local onde foi desenvolvid.
 
 ---
 
 ## Dificuldades :no_entry_sign:
 
-Durante o projeto, foram enfrentadas algumas dificuldades, especialmente devido ao uso de uma plataforma desconhecida, como o Render, e a depuração de seus bugs na conta gratuita. 
+Durante o projeto, foram enfrentadas algumas dificuldades, especialmente devido ao uso de uma plataforma Google Colab
 
-Isso ocorreu porque há uma **diferença significativa entre a plataforma Google Colab e o Render**, o que tornou o processo de validação de erros mais lento. Embora os testes pudessem ser realizados no ambiente Colab e mitigados, a **validação dos erros levou muito tempo**, o que dificultou bastante a construção do projeto.
+Isso ocorreu porque houve **uma atualização tanto no Google Colab quanto na biblioteca Seleniu**, o que tornou o processo de validação de erros mais lento. Embora os testes pudessem ser realizados no ambiente Colab e mitigados, a **validação dos erros levou muito, muito tempo**, o que dificultou bastante a construção do projeto.
 
 Além disso, **o tempo necessário para se familiarizar com a plataforma e o domínio necessário do Python** tornaram mais complexa a aprendizagem e leitura da documentação específica para implementação de códigos e bibliotecas.
 
@@ -63,11 +67,9 @@ Além disso, **o tempo necessário para se familiarizar com a plataforma e o dom
 
 Essas habilidades listadas são essenciais para o trabalho com desenvolvimento de software e análise de dados.
 
-Entre eles, ter um **maior domínio de strings em Python** permite a manipulação e análise de dados em textos, algo fundamental para diversas aplicações. 
+Entre eles, ter um **maior domínio de strings e pandas em Python** permite a manipulação e análise de dados, algo fundamental para diversas aplicações. 
 
-Outro ponto, foi o **melhor entendimento do funcionamento de API's** é importante para realizar a integração de diferentes sistemas e aplicações, permitindo a troca de informações de forma mais eficiente e segura. 
-
-Igualmente, o **conhecimento sobre aplicações de serviço de nuvem** permite o desenvolvimento de soluções escaláveis e com alta disponibilidade, o que é essencial para automações, principalmente no contexto do jornalismo de dados. 
+Outro ponto, foi o **melhor entendimento do funcionamento dda raspagem com Selenium** é importante para realizar a integração de diferentes sistemas e aplicações, permitindo a troca de informações de forma mais eficiente e segura. 
 
 A **melhoria das habilidades de scrapping** é importante para coletar e extrair informações de fontes diversas, o que é fundamental para a análise de dados. 
 
@@ -78,3 +80,5 @@ Por fim, ter um **maior domínio das habilidades com manipulação de dados de u
 ## Desafios
 
 - Construir um servidor próprio, seja com um Raspberry Pi 3 ou um computador velho, para não depender mais do Render (nunca mais)
+- Melhorar a forma como as tabelas são processada para incluir as Secretarias contendo outras tabelas
+- Aprofundamento técnico para melhorar a efiência e eficácia do scrapper
